@@ -1,0 +1,307 @@
+$dark-bg: #222;
+$light-lines: #DDD;
+$overlay-color: rgba(0,10,12,.8);
+$text-light: #FFF;
+$text-dark: #011;
+$title-font:'Raleway', sans-serif;
+$title-font2: 'Overlock', cursive;
+
+
+body, html {
+  height: 100%;
+  font-family: $title-font2;
+}
+
+@media (max-width: 375px){
+  .homeContainer {
+    width:100%;
+    height: 15em;
+  }
+}
+@media (max-width: 620px){
+    div.project {
+      padding: 10px 0px;
+  }
+}
+@media (min-width: 376px){
+  .homeContainer {
+    width:100%;
+    height: 15em;
+  }
+}
+@media (min-width: 481px){
+  .homeContainer {
+    width:100%;
+    height: 10em;
+  }
+}
+
+
+@media (min-width: 720px){
+  .homeContainer {
+    width:100%;
+    height: 10em;
+  }
+}
+
+.homeContainer {
+
+  //border: solid red 2px;
+  position: relative;
+  text-align: center;
+  // z-index: 2;
+
+}
+
+.home {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("http://i68.tinypic.com/6hq8gl.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+
+  padding: 0px;
+  //border:solid 1px black;
+}
+
+.home-overlay {
+  height: 100%;
+  position: absolute;
+  background-color: $overlay-color;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  box-sizing: border-box;
+
+  padding: 1.2em;
+}
+.home-title {
+  color: $text-light;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 1px black;
+  font-family: $title-font;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.home-subtitle {
+  color: $text-light;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 1px black;
+  letter-spacing: 8px;
+  font-family: $title-font;
+}
+
+/*Navbar------*/
+
+.header {
+	border-bottom: .1em solid $light-lines;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.navbar-custom {
+	//border: 0;
+	//border-radius: 0;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: $title-font2;
+  background: #fff;
+	padding: 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav > li > a {
+	font-size: .9em;
+	letter-spacing: .1em;
+	color: $text-dark;
+  font-family: $title-font2;
+}
+
+.navbar-custom .nav li.active,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .navbar-nav > li.active a {
+	background: none;
+	//outline: 1px dashed red;
+	color: #066;
+  font-size: 1.2em;
+}
+
+.navbar-custom .navbar-brand {
+	font-weight: 700;
+	font-size: 2em;
+
+}
+
+
+.navbar-custom .navbar-toggle .icon-bar {
+	background: $dark-bg;
+}
+
+.about-container {
+  min-height: 16em;
+  padding: 3em 2em 2em 2em;
+  width: 90%;
+  max-width:960px;
+  margin: auto;
+}
+
+.about-text {
+  font-size: 1.2em
+}
+
+.work-container {
+  padding-top: 3em;
+}
+
+.work-title {
+  font-family: $title-font2;
+  //font-size: 1em;
+
+}
+
+.work-subtitle {
+  font-family: $title-font2;
+  font-size: 1.3em;
+
+}
+
+.btn-group {
+  position: relative;
+  margin: 2em;
+  z-index: 0;
+}
+
+.projects-container {
+  width:100%;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.select-buttons {
+  border: solid .0em $dark-bg;
+  border-radius: 0;
+  font-family: $title-font2;
+  font-size: 1.2em;
+}
+
+.select-buttons:active,
+.select-buttons:hover,
+.select-buttons:focus {
+  color: $text-light;
+  background-color: lighten($dark-bg, 10%);
+  text-decoration: underline;
+}
+
+label.active {
+  color: $text-light;
+  background-color: $dark-bg;
+  text-decoration: underline;
+
+}
+
+div.work-container {
+  min-height: 60em;
+}
+
+div.project {
+  //padding: 0;
+  border:solid $light-lines .1em;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+div.project-overlay {
+  background:rgba(0,0,0,.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: $text-light;
+  padding: 2em;
+  font-family: $title-font2;
+  font-size: 1.2em;
+}
+
+div.project-overlay:hover {
+  opacity: 1;
+}
+
+div.sorted-separator {
+  margin: 2em auto;
+  width: 70%;
+  height: .1em;
+  background: $dark-bg;
+  border-radius: 0;
+
+}
+
+.social-buttons-div {
+  margin-top: 2em;
+  padding: 3em 2em 2em 4em;
+  background: darken($dark-bg, 5%);
+  width: 100%;
+  min-height: 10em;
+  color: $text-light;
+  //border: solid green 2px;
+}
+
+.socialButtons {
+  -moz-box-shadow: inset 0px 0px 3px 0px #000;
+  -webkit-box-shadow: inset 0px 0px 3px 0px #000;
+  box-shadow: inset 0px 0px 1px 0px #000;
+  background-color: #eee;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid #000;
+  display: inline-block;
+  cursor: pointer;
+  //color: #FFF;
+  font-family: $title-font2;
+  font-size: 1.2em;
+  padding: .7em .7em;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #000;
+}
+a.socialButtons:link {color:$text-dark; text-decoration:none}
+a.socialButtons:visited {color:$text-dark;text-decoration:none}
+a.socialButtons:hover {color:$text-light;}
+a.socialButtons:active  {color:$text-light; text-decoration:none}
+
+
+.socialButtons:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transition: transform .3s ease-out;
+  background-color: darken($dark-bg,20%);
+  color: $text-light;
+  border-color: $text-dark;
+}
+
+.email-tag {
+  color: $text-light;
+  font-family: $title-font2;
+}
+
+a.email-tag:hover {color: $text-light; text-decoration:none; font-size: 1.25em;}
+a.email-tag:visited {color: $text-light; text-decoration:none;}
+
+div {
+  //border: solid 2px green;
+}
